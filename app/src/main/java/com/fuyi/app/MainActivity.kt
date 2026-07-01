@@ -77,12 +77,12 @@ fun FuYiTheme(content: @Composable () -> Unit) {
 @Composable
 fun SetupScreen() {
     val context = LocalContext.current
-    var hasOverlayPermission by remember { mutableStateOf(canDrawOverlays()) }
+    var hasOverlayPermission by remember { mutableStateOf(canDrawOverlays(context)) }
     var isRunning by remember { mutableStateOf(false) }
     var hasModel by remember { mutableStateOf(checkModel()) }
 
     LaunchedEffect(Unit) {
-        hasOverlayPermission = canDrawOverlays()
+        hasOverlayPermission = canDrawOverlays(context)
         hasModel = checkModel()
     }
 
