@@ -10,22 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.0
 
       - name: Set up JDK 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v4.7.1
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Cache Gradle
-        uses: gradle/gradle-build-action@v3
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4.3.0
 
       - name: Build debug APK
         run: chmod +x gradlew && ./gradlew assembleDebug
 
       - name: Upload APK
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.0
         with:
           name: FuYi-debug
           path: app/build/outputs/apk/debug/app-debug.apk
