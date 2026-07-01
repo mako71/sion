@@ -184,8 +184,8 @@ fun StatusRow(label: String, statusText: String? = null, status: Boolean, onActi
     }
 }
 
-fun canDrawOverlays(): Boolean {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) Settings.canDrawOverlays(this as? android.app.Activity) else true
+fun canDrawOverlays(context: android.content.Context): Boolean {
+    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) Settings.canDrawOverlays(context) else true
 }
 
 fun checkModel(): Boolean {
