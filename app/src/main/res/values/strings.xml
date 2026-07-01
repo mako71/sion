@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">浮译</string>
+    <string name="quick_tile_label">浮译翻译</string>
+    <string name="start_button">开始翻译</string>
+    <string name="stop_button">停止翻译</string>
+    <string name="status_idle">就绪</string>
+    <string name="status_listening">聆听中…</string>
+    <string name="model_downloading">下载日语模型中…</string>
+    <string name="model_ready">模型就绪</string>
+    <string name="channel_audio_capture">浮译音频捕获</string>
+    <string name="channel_floating">浮译翻译窗口</string>
+</resources>
